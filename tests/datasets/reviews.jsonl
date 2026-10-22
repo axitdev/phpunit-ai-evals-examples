@@ -1,0 +1,10 @@
+{"id": "battery", "review": "The battery died after two days. Waste of money.", "expected": "negative"}
+{"id": "gift", "review": "Bought it as a gift and my sister loves it. Great quality!", "expected": "positive"}
+{"id": "delivery", "review": "It arrived on Tuesday in a brown box.", "expected": "neutral"}
+{"id": "noise", "review": "Works fine, but the fan is so loud I can't sleep next to it.", "expected": "negative"}
+{"id": "upgrade", "review": "Huge upgrade over my old one, setup took five minutes.", "expected": "positive"}
+{"id": "color", "review": "The color is slightly darker than in the photos.", "expected": "neutral"}
+{"id": "support", "review": "Customer support replaced my broken unit within a day. Impressed.", "expected": "positive"}
+{"id": "refund", "review": "Stopped charging after a week and the seller ignores my emails.", "expected": "negative"}
+{"id": "manual", "review": "The manual is available in English and German.", "expected": "neutral"}
+{"id": "sarcasm", "review": "Oh great, another charger that melts. Exactly what I wanted.", "expected": "negative"}

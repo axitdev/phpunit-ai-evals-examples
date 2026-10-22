@@ -1,0 +1,227 @@
+{
+    "generated_at": "2026-10-22T07:48:29+00:00",
+    "totals": {
+        "interactions": 27,
+        "vcrHits": 27,
+        "liveCalls": 0,
+        "promptTokens": 2756,
+        "completionTokens": 3000,
+        "reasoningTokens": 0,
+        "judgePassed": 5,
+        "judgeFailed": 0,
+        "judgeScoreSum": 5.0
+    },
+    "tests": {
+        "App\\Tests\\LaravelHttpTest::testTranslatesToGerman": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 38,
+            "completionTokens": 10,
+            "reasoningTokens": 0,
+            "latencyMs": 27023.3,
+            "judge": [
+                {
+                    "assertion": "satisfies the rubric \"Is a correct German translation of \"The library opens at nine in the morning.\"\"",
+                    "score": 1.0,
+                    "threshold": 0.8,
+                    "passed": true,
+                    "reason": "The German translation provided, \"Die Bibliothek öffnet um neun Uhr morgens,\" is a perfectly correct and natural translation of the English sentence \"The library opens at nine in the morning.\" The grammar, vocabulary, and structure are all accurate."
+                }
+            ],
+            "passRates": []
+        },
+        "App\\Tests\\RefundAgentTest::testRefundsADamagedOrder": {
+            "interactions": 3,
+            "vcrHits": 3,
+            "liveCalls": 0,
+            "promptTokens": 791,
+            "completionTokens": 529,
+            "reasoningTokens": 0,
+            "latencyMs": 15498.4,
+            "judge": [
+                {
+                    "assertion": "satisfies the rubric \"Tells the customer that the order was refunded, politely\"",
+                    "score": 1.0,
+                    "threshold": 0.8,
+                    "passed": true,
+                    "reason": "The output successfully informs the customer that the order was refunded and does so in a polite manner, addressing the issue (broken teapot) first. The rubric is fully satisfied."
+                },
+                {
+                    "assertion": "is grounded in the given context",
+                    "score": 1.0,
+                    "threshold": 0.85,
+                    "passed": true,
+                    "reason": "The output accurately reflects that the teapot arrived broken and that a full refund was processed, both of which are explicitly stated in the context."
+                }
+            ],
+            "passRates": []
+        },
+        "App\\Tests\\RefundAgentTest::testDoesNotRefundAnOrderThatDoesNotExist": {
+            "interactions": 2,
+            "vcrHits": 2,
+            "liveCalls": 0,
+            "promptTokens": 443,
+            "completionTokens": 377,
+            "reasoningTokens": 0,
+            "latencyMs": 8518.0,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testAccuracyOnTheReviewDataset": {
+            "interactions": 10,
+            "vcrHits": 10,
+            "liveCalls": 0,
+            "promptTokens": 691,
+            "completionTokens": 993,
+            "reasoningTokens": 0,
+            "latencyMs": 53221.600000000006,
+            "judge": [],
+            "passRates": [
+                {
+                    "assertion": "sentiment accuracy",
+                    "passed": 10,
+                    "total": 10,
+                    "rate": 1,
+                    "minRate": 0.8
+                }
+            ]
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#battery": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 68,
+            "completionTokens": 15,
+            "reasoningTokens": 0,
+            "latencyMs": 2422.7,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#gift": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 71,
+            "completionTokens": 15,
+            "reasoningTokens": 0,
+            "latencyMs": 768.0,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#delivery": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 66,
+            "completionTokens": 144,
+            "reasoningTokens": 0,
+            "latencyMs": 6152.2,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#noise": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 75,
+            "completionTokens": 14,
+            "reasoningTokens": 0,
+            "latencyMs": 575.7,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#upgrade": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 69,
+            "completionTokens": 15,
+            "reasoningTokens": 0,
+            "latencyMs": 1010.6,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#color": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 67,
+            "completionTokens": 274,
+            "reasoningTokens": 0,
+            "latencyMs": 21160.5,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#support": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 70,
+            "completionTokens": 15,
+            "reasoningTokens": 0,
+            "latencyMs": 1226.8,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#refund": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 69,
+            "completionTokens": 15,
+            "reasoningTokens": 0,
+            "latencyMs": 954.5,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#manual": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 66,
+            "completionTokens": 151,
+            "reasoningTokens": 0,
+            "latencyMs": 6707.6,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema#sarcasm": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 70,
+            "completionTokens": 162,
+            "reasoningTokens": 0,
+            "latencyMs": 5219.6,
+            "judge": [],
+            "passRates": []
+        },
+        "App\\Tests\\StreamingSummarizerTest::testSummaryIsShortAndGrounded": {
+            "interactions": 1,
+            "vcrHits": 1,
+            "liveCalls": 0,
+            "promptTokens": 102,
+            "completionTokens": 271,
+            "reasoningTokens": 0,
+            "latencyMs": 1028.7,
+            "judge": [
+                {
+                    "assertion": "is grounded in the given context",
+                    "score": 1.0,
+                    "threshold": 0.85,
+                    "passed": true,
+                    "reason": "All claims in the output are directly supported by the context. The context states the city council approved converting the old tram depot into a public library, and it also mentions that the library will include a children's wing."
+                },
+                {
+                    "assertion": "satisfies the rubric \"Mentions that a library will be built in the old tram depot\"",
+                    "score": 1.0,
+                    "threshold": 0.8,
+                    "passed": true,
+                    "reason": "The output explicitly mentions that the old tram depot will be converted into a new public library, which satisfies the requirement of the rubric."
+                }
+            ],
+            "passRates": []
+        }
+    }
+}

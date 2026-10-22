@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         cacheDirectory=".phpunit.cache"
+         colors="true"
+         failOnWarning="true"
+         failOnRisky="true">
+    <testsuites>
+        <testsuite name="examples">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+
+    <php>
+        <!-- Cassettes were recorded against a local Ollama. Point these at OpenAI (or any compatible API) to re-record. -->
+        <env name="LLM_BASE_URI" value="http://localhost:11434/v1"/>
+        <env name="LLM_MODEL" value="gemma4:e4b"/>
+        <env name="LLM_API_KEY" value="ollama"/>
+        <env name="OLLAMA_URI" value="http://localhost:11434"/>
+        <env name="AI_EVAL_JUDGE_BASE_URI" value="http://localhost:11434/v1"/>
+        <env name="AI_EVAL_JUDGE_MODEL" value="gemma4:e4b"/>
+        <env name="AI_EVAL_JUDGE_API_KEY" value="ollama"/>
+        <env name="AI_EVAL_JUDGE_JSON_MODE" value="0"/>
+        <env name="AI_EVAL_JUDGE_TEMPERATURE" value="0"/>
+    </php>
+
+    <extensions>
+        <bootstrap class="Axitdev\PhpUnitAiEvals\PhpUnit\AiEvalsExtension">
+            <parameter name="cassettesPath" value="tests/cassettes"/>
+            <parameter name="mode" value="auto"/>
+            <parameter name="reportPath" value="build/ai-evals.json"/>
+            <parameter name="baselinePath" value="tests/ai-evals-baseline.json"/>
+        </bootstrap>
+    </extensions>
+</phpunit>

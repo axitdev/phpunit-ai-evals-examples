@@ -1,0 +1,800 @@
+{
+    "version": "1.0",
+    "test": "App\\Tests\\SentimentClassifierTest::testEveryAnswerMatchesTheSchema",
+    "interactions": [
+        {
+            "semantic_hash": "64d16d55c4f88935df28fcfb306eacbfd97e67eaf86fd4e11b7dec6597048ffb",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:33:36+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "The battery died after two days. Waste of money.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:33:36 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-349",
+                    "object": "chat.completion",
+                    "created": 1792632816,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "{\"sentiment\": \"negative\", \"confidence\": 0.95}"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 68,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 67
+                        },
+                        "completion_tokens": 15,
+                        "total_tokens": 83
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 68,
+                "completion_tokens": 15,
+                "reasoning_tokens": 0,
+                "latency_ms": 2422.7,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "df1ed8d570922562700390ce206e1eb929080fc71b7b5244be2a81e5acb6700e",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:33:37+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Bought it as a gift and my sister loves it. Great quality!",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:33:37 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-991",
+                    "object": "chat.completion",
+                    "created": 1792632817,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "{\"sentiment\": \"positive\", \"confidence\": 0.95}"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 71,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 70
+                        },
+                        "completion_tokens": 15,
+                        "total_tokens": 86
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 71,
+                "completion_tokens": 15,
+                "reasoning_tokens": 0,
+                "latency_ms": 768,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "0794ff3513e692db3b3772d2fa315c1d9829d2282bb39860592dbb2fc3020ed9",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:33:43+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "It arrived on Tuesday in a brown box.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:33:43 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-748",
+                    "object": "chat.completion",
+                    "created": 1792632823,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "```json\n{\n  \"sentiment\": \"neutral\",\n  \"confidence\": 1.0\n}\n```",
+                                "reasoning": "Thinking Process:\n1.  **Analyze the input:** \"It arrived on Tuesday in a brown box.\"\n2.  **Determine the sentiment:** The statement is purely factual. It provides information about delivery time and packaging color. It does not express satisfaction, dissatisfaction, excitement, or disappointment.\n3.  **Classify the sentiment:** Neutral.\n4.  **Determine confidence:** Since the statement is objective and lacks emotional content, the confidence in classifying it as neutral is high.\n5.  **Format the output:** Create the required JSON structure."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 66,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 65
+                        },
+                        "completion_tokens": 144,
+                        "total_tokens": 210
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 66,
+                "completion_tokens": 144,
+                "reasoning_tokens": 0,
+                "latency_ms": 6152.2,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "bcfe692e081e712d926ccc2bd009e451df6306554856506a59177cf821fa6591",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:33:44+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Works fine, but the fan is so loud I can't sleep next to it.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:33:44 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-695",
+                    "object": "chat.completion",
+                    "created": 1792632824,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "{\"sentiment\": \"negative\", \"confidence\": 0.8}"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 75,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 74
+                        },
+                        "completion_tokens": 14,
+                        "total_tokens": 89
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 75,
+                "completion_tokens": 14,
+                "reasoning_tokens": 0,
+                "latency_ms": 575.7,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "6e57f885190d2c4ca1696909c8ffcc2f91efa57e667d2adf0523dae9698f904a",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:33:45+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Huge upgrade over my old one, setup took five minutes.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:33:45 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-689",
+                    "object": "chat.completion",
+                    "created": 1792632825,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "{\"sentiment\": \"positive\", \"confidence\": 0.95}"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 69,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 68
+                        },
+                        "completion_tokens": 15,
+                        "total_tokens": 84
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 69,
+                "completion_tokens": 15,
+                "reasoning_tokens": 0,
+                "latency_ms": 1010.6,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "8bc3595cf7854fae1f1b0e46c2c891c5d91f565baa07f372ff892fcc0623cd55",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:34:06+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "The color is slightly darker than in the photos.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:34:06 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-342",
+                    "object": "chat.completion",
+                    "created": 1792632846,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "```json\n{\n  \"sentiment\": \"neutral\",\n  \"confidence\": 0.9\n}\n```",
+                                "reasoning": "Thinking Process:\n1.  **Analyze the input:** \"The color is slightly darker than in the photos.\"\n2.  **Determine the sentiment:**\n    *   Is it strongly positive? No. (It doesn't praise quality, function, or overall experience.)\n    *   Is it strongly negative? No. (It's not \"broken,\" \"terrible,\" or \"disappointing.\")\n    *   Is it neutral/mildly negative? Yes. It's a factual observation about a discrepancy (color mismatch), which is a minor complaint or a neutral observation that doesn't significantly impact the overall satisfaction level, but it's not a compliment.\n3.  **Refine the sentiment classification:** While a slight mismatch could be seen as a minor negative point, the phrasing \"slightly darker\" is very mild. It's more of a neutral observation about product representation rather than a strong complaint. Therefore, \"neutral\" is the most accurate classification.\n4.  **Determine confidence:** The statement is purely descriptive and lacks emotional intensity. High confidence in the \"neutral\" classification is appropriate.\n5.  **Format the output:** JSON structure required."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 67,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 66
+                        },
+                        "completion_tokens": 274,
+                        "total_tokens": 341
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 67,
+                "completion_tokens": 274,
+                "reasoning_tokens": 0,
+                "latency_ms": 21160.5,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "ee870cc67ff086bfdeb71e9a0a274570f5f5a913213bf96ccb2e4d13a4500b30",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:34:07+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Customer support replaced my broken unit within a day. Impressed.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:34:07 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-668",
+                    "object": "chat.completion",
+                    "created": 1792632847,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "{\"sentiment\": \"positive\", \"confidence\": 0.95}"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 70,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 69
+                        },
+                        "completion_tokens": 15,
+                        "total_tokens": 85
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 70,
+                "completion_tokens": 15,
+                "reasoning_tokens": 0,
+                "latency_ms": 1226.8,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "ba5145ad37d0f54caa76012235427aaccd613e7ef236c02001a5759cf98ef088",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:34:08+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Stopped charging after a week and the seller ignores my emails.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:34:08 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-585",
+                    "object": "chat.completion",
+                    "created": 1792632848,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "{\"sentiment\": \"negative\", \"confidence\": 0.95}"
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 69,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 68
+                        },
+                        "completion_tokens": 15,
+                        "total_tokens": 84
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 69,
+                "completion_tokens": 15,
+                "reasoning_tokens": 0,
+                "latency_ms": 954.5,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "cd290ebd9826d58a8589d1f0e64e87a3f4d8a5985990cc325b615f9303b56cc4",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:34:15+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "The manual is available in English and German.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:34:15 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-96",
+                    "object": "chat.completion",
+                    "created": 1792632855,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "```json\n{\n  \"sentiment\": \"neutral\",\n  \"confidence\": 1.0\n}\n```",
+                                "reasoning": "Thinking Process:\n1.  **Analyze the input:** \"The manual is available in English and German.\"\n2.  **Determine the sentiment:** This statement is purely factual. It provides information about the product's features (language availability). It does not express excitement, frustration, satisfaction, or dissatisfaction.\n3.  **Classify the sentiment:** Neutral.\n4.  **Determine confidence:** Since the statement is a simple, objective fact, the confidence in classifying it as neutral is high.\n5.  **Format the output:** JSON object with \"sentiment\" and \"confidence\"."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 66,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 65
+                        },
+                        "completion_tokens": 151,
+                        "total_tokens": 217
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 66,
+                "completion_tokens": 151,
+                "reasoning_tokens": 0,
+                "latency_ms": 6707.6,
+                "tool_calls": []
+            }
+        },
+        {
+            "semantic_hash": "5476632f8dbb56d87e5d55a92ccb95ba5558214aed1002b0adb3c3e5a4202f1e",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T01:34:20+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "Classify the sentiment of the product review. Reply with only a JSON object: {\"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number between 0 and 1}.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Oh great, another charger that melts. Exactly what I wanted.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b"
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 01:34:20 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-592",
+                    "object": "chat.completion",
+                    "created": 1792632860,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "```json\n{\n  \"sentiment\": \"negative\",\n  \"confidence\": 1.0\n}\n```",
+                                "reasoning": "Thinking Process:\n\n1.  **Analyze the input:** \"Oh great, another charger that melts. Exactly what I wanted.\"\n2.  **Identify the core emotion/tone:** The language (\"Oh great,\" \"melts,\" \"Exactly what I wanted\") is highly sarcastic.\n3.  **Determine the actual sentiment:** The speaker is clearly frustrated and disappointed because the product (a charger) is defective (it melts).\n4.  **Classify the sentiment:** Negative.\n5.  **Assign confidence:** The negative sentiment is extremely clear and unambiguous. (High confidence).\n6.  **Format the output:** JSON object."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 70,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 69
+                        },
+                        "completion_tokens": 162,
+                        "total_tokens": 232
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 70,
+                "completion_tokens": 162,
+                "reasoning_tokens": 0,
+                "latency_ms": 5219.6,
+                "tool_calls": []
+            }
+        }
+    ]
+}

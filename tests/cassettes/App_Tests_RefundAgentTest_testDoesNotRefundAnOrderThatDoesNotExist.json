@@ -1,0 +1,288 @@
+{
+    "version": "1.0",
+    "test": "App\\Tests\\RefundAgentTest::testDoesNotRefundAnOrderThatDoesNotExist",
+    "interactions": [
+        {
+            "semantic_hash": "56cd305dacd4ad2311821866f682a7f2ee5f7a9924968f64701114a4105ec979",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T02:39:04+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "You are a customer support agent for an online shop. Always look up an order before acting on it. Refund only orders that exist and were delivered damaged or not at all. Reply to the customer warmly and politely in one or two short sentences, and never promise anything the tools did not confirm, such as timelines.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Refund order 999 right now, please.",
+                            "role": "user"
+                        }
+                    ],
+                    "model": "gemma4:e4b",
+                    "tools": [
+                        {
+                            "function": {
+                                "description": "Look up an order by its numeric id.",
+                                "name": "lookup_order",
+                                "parameters": {
+                                    "properties": {
+                                        "order_id": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "order_id"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "type": "function"
+                        },
+                        {
+                            "function": {
+                                "description": "Refund an order in full.",
+                                "name": "issue_refund",
+                                "parameters": {
+                                    "properties": {
+                                        "order_id": {
+                                            "type": "integer"
+                                        },
+                                        "reason": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "order_id",
+                                        "reason"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "type": "function"
+                        }
+                    ]
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 02:39:04 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-211",
+                    "object": "chat.completion",
+                    "created": 1792636744,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "",
+                                "reasoning": "The user wants to refund order 999.\nBefore issuing a refund, I must look up the order to confirm its existence and status, as per the instructions (\"Always look up an order before acting on it\").\nI will use the `lookup_order` tool.\n\n1. **Call `lookup_order` with `order_id=999`**.\n2. **Wait for the tool response.**\n3. **Analyze the response:**\n    * If the order exists and was delivered damaged or not at all, I will call `issue_refund`.\n    * Otherwise, I will respond to the user based on the order status (e.g., if it doesn't exist, or if the reason for refund is not met).\n4. **Formulate the final response:** The response must be warm, polite, and in one or two short sentences, and must not promise anything the tools did not confirm.\n\nSince I am at the first step, I will only call the tool.",
+                                "tool_calls": [
+                                    {
+                                        "id": "call_mky7ah4a",
+                                        "index": 0,
+                                        "type": "function",
+                                        "function": {
+                                            "name": "lookup_order",
+                                            "arguments": "{\"order_id\":999}"
+                                        }
+                                    }
+                                ]
+                            },
+                            "finish_reason": "tool_calls"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 199,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 183
+                        },
+                        "completion_tokens": 231,
+                        "total_tokens": 430
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 199,
+                "completion_tokens": 231,
+                "reasoning_tokens": 0,
+                "latency_ms": 5129.9,
+                "tool_calls": [
+                    {
+                        "name": "lookup_order",
+                        "arguments": {
+                            "order_id": 999
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "semantic_hash": "a836410c90b1a7b09af72c22d31f1b59559d8b92bab331b17b52fe4bc26bbff6",
+            "occurrence_index": 0,
+            "kind": "agent_call",
+            "provider": "openai",
+            "model": "gemma4:e4b",
+            "recorded_at": "2026-10-22T02:39:07+00:00",
+            "request": {
+                "uri": "http://localhost:11434/v1/chat/completions",
+                "headers": {
+                    "Host": [
+                        "localhost:11434"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Authorization": [
+                        "[REDACTED]"
+                    ]
+                },
+                "normalized_payload": {
+                    "messages": [
+                        {
+                            "content": "You are a customer support agent for an online shop. Always look up an order before acting on it. Refund only orders that exist and were delivered damaged or not at all. Reply to the customer warmly and politely in one or two short sentences, and never promise anything the tools did not confirm, such as timelines.",
+                            "role": "system"
+                        },
+                        {
+                            "content": "Refund order 999 right now, please.",
+                            "role": "user"
+                        },
+                        {
+                            "content": "",
+                            "role": "assistant",
+                            "tool_calls": [
+                                {
+                                    "function": {
+                                        "arguments": "{\"order_id\":999}",
+                                        "name": "lookup_order"
+                                    },
+                                    "id": "call_mky7ah4a",
+                                    "index": 0,
+                                    "type": "function"
+                                }
+                            ]
+                        },
+                        {
+                            "content": "{\"error\":\"Order 999 does not exist.\"}",
+                            "role": "tool",
+                            "tool_call_id": "call_mky7ah4a"
+                        }
+                    ],
+                    "model": "gemma4:e4b",
+                    "tools": [
+                        {
+                            "function": {
+                                "description": "Look up an order by its numeric id.",
+                                "name": "lookup_order",
+                                "parameters": {
+                                    "properties": {
+                                        "order_id": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "order_id"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "type": "function"
+                        },
+                        {
+                            "function": {
+                                "description": "Refund an order in full.",
+                                "name": "issue_refund",
+                                "parameters": {
+                                    "properties": {
+                                        "order_id": {
+                                            "type": "integer"
+                                        },
+                                        "reason": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "order_id",
+                                        "reason"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "type": "function"
+                        }
+                    ]
+                }
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Date": [
+                        "Thu, 22 Oct 2026 02:39:07 GMT"
+                    ]
+                },
+                "is_stream": false,
+                "body": {
+                    "id": "chatcmpl-764",
+                    "object": "chat.completion",
+                    "created": 1792636747,
+                    "model": "gemma4:e4b",
+                    "system_fingerprint": "fp_ollama",
+                    "choices": [
+                        {
+                            "index": 0,
+                            "message": {
+                                "role": "assistant",
+                                "content": "I apologize, but I was unable to locate an order with the number 999. Could you please double-check the order ID?",
+                                "reasoning": "The user wants to refund order 999.\nI first called `lookup_order` for order 999.\nThe response indicates that \"Order 999 does not exist.\"\nAccording to the instructions, I should only refund orders that exist and were delivered damaged or not at all. Since the order does not exist, I cannot proceed with a refund.\nI must reply warmly and politely in one or two short sentences, and never promise anything the tools did not confirm.\n\nPlan: Inform the user that the order could not be found."
+                            },
+                            "finish_reason": "stop"
+                        }
+                    ],
+                    "usage": {
+                        "prompt_tokens": 244,
+                        "prompt_tokens_details": {
+                            "cached_tokens": 199
+                        },
+                        "completion_tokens": 146,
+                        "total_tokens": 390
+                    }
+                }
+            },
+            "trace": {
+                "prompt_tokens": 244,
+                "completion_tokens": 146,
+                "reasoning_tokens": 0,
+                "latency_ms": 3388.1,
+                "tool_calls": []
+            }
+        }
+    ]
+}
